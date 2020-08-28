@@ -12,9 +12,19 @@ class MainViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    lazy var viewModel: MainViewModel = {
+        return MainViewModel(repository: Repository.shared, delegate: self)
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        viewModel.getData()
+    }
+}
+
+extension MainViewController: BaseViewModelDelegate {
+    func didChangeState(state: State) {
         
     }
 }

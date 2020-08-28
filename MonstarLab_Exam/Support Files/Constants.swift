@@ -8,8 +8,20 @@
 
 import UIKit
 
+typealias SuccessTaskHandler = ((Data, URLResponse?) -> Void)
+typealias ErrorHandler = ((ErrorResponse) -> Void)
+
 let screenHeight = UIScreen.main.bounds.height
 let screenWidth = UIScreen.main.bounds.width
 
-let baseUrl = "https://api.github.com/"
+let baseUrl = "https://jsonplaceholder.typicode.com/"
 
+struct Endpoint {
+    static let photos = "photos"
+}
+
+enum State {
+    case loading
+    case success(String?)
+    case error(String?)
+}
