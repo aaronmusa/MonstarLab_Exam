@@ -22,6 +22,7 @@
 		1ED76C3124F8F21F0066DDD5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED76C3024F8F21F0066DDD5 /* Item.swift */; };
 		1ED76C3324F8F2F20066DDD5 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED76C3224F8F2F20066DDD5 /* ErrorResponse.swift */; };
 		1ED76C3524F8F35E0066DDD5 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED76C3424F8F35E0066DDD5 /* Helpers.swift */; };
+		1ED76C3724F8F9D80066DDD5 /* WebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED76C3624F8F9D80066DDD5 /* WebImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		1ED76C3024F8F21F0066DDD5 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		1ED76C3224F8F2F20066DDD5 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		1ED76C3424F8F35E0066DDD5 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		1ED76C3624F8F9D80066DDD5 /* WebImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				1ED76C2B24F8F0890066DDD5 /* Repository.swift */,
 				1ED76C3224F8F2F20066DDD5 /* ErrorResponse.swift */,
 				1ED76C3424F8F35E0066DDD5 /* Helpers.swift */,
+				1ED76C3624F8F9D80066DDD5 /* WebImageView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ED76C3724F8F9D80066DDD5 /* WebImageView.swift in Sources */,
 				1ED76C3124F8F21F0066DDD5 /* Item.swift in Sources */,
 				1ED76C2924F8F06E0066DDD5 /* MainViewModel.swift in Sources */,
 				1ED76C2024F8EF260066DDD5 /* CustomView.swift in Sources */,

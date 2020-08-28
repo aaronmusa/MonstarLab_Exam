@@ -51,6 +51,12 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         let row = indexPath.row
         
         cell.mainTitleLabel.text = viewModel.titleOfItemAt(row)
+        if let url = URL(string: viewModel.thumbnailUrlOfItemAt(row)) {
+            cell.colorImageView.loadImage(with: url)
+        } else {
+            cell.colorImageView.image = UIImage()
+        }
+        
         return cell
     }
 }

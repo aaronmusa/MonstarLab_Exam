@@ -10,6 +10,6 @@ import UIKit
 
 class ItemCell: UITableViewCell {
     @IBOutlet weak var mainTitleLabel: UILabel!
-    @IBOutlet weak var colorImageView: UIImageView!
+    @IBOutlet weak var colorImageView: WebImageView!
     
 }

@@ -40,4 +40,8 @@ class MainViewModel {
     func titleOfItemAt(_ index: Int) -> String {
         return items[safe: index]?.title ?? ""
     }
+    
+    func thumbnailUrlOfItemAt(_ index: Int) -> String {
+        return items[safe: index]?.thumbnailUrl ?? ""
+    }
 }
