@@ -10,7 +10,11 @@ import UIKit
 
 class MainViewController: BaseViewController {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.tableFooterView = UIView()
+        }
+    }
     
     lazy var viewModel: MainViewModel = {
         return MainViewModel(repository: Repository.shared, delegate: self)
