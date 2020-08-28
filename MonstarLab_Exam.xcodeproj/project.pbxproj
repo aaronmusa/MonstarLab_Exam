@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1ED76C0624F8EBDD0066DDD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED76C0524F8EBDD0066DDD5 /* AppDelegate.swift */; };
-		1ED76C0824F8EBDD0066DDD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED76C0724F8EBDD0066DDD5 /* SceneDelegate.swift */; };
-		1ED76C0A24F8EBDD0066DDD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED76C0924F8EBDD0066DDD5 /* ViewController.swift */; };
+		1ED76C0A24F8EBDD0066DDD5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED76C0924F8EBDD0066DDD5 /* BaseViewController.swift */; };
 		1ED76C0D24F8EBDD0066DDD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ED76C0B24F8EBDD0066DDD5 /* Main.storyboard */; };
 		1ED76C0F24F8EBDE0066DDD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ED76C0E24F8EBDE0066DDD5 /* Assets.xcassets */; };
 		1ED76C1224F8EBDE0066DDD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ED76C1024F8EBDE0066DDD5 /* LaunchScreen.storyboard */; };
@@ -18,8 +17,7 @@
 /* Begin PBXFileReference section */
 		1ED76C0224F8EBDD0066DDD5 /* MonstarLab_Exam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonstarLab_Exam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED76C0524F8EBDD0066DDD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1ED76C0724F8EBDD0066DDD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1ED76C0924F8EBDD0066DDD5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1ED76C0924F8EBDD0066DDD5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		1ED76C0C24F8EBDD0066DDD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1ED76C0E24F8EBDE0066DDD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1ED76C1124F8EBDE0066DDD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +54,54 @@
 		1ED76C0424F8EBDD0066DDD5 /* MonstarLab_Exam */ = {
 			isa = PBXGroup;
 			children = (
+				1ED76C1B24F8EC950066DDD5 /* View */,
+				1ED76C1A24F8EC8E0066DDD5 /* ViewModel */,
+				1ED76C1924F8EC880066DDD5 /* Model */,
 				1ED76C0524F8EBDD0066DDD5 /* AppDelegate.swift */,
-				1ED76C0724F8EBDD0066DDD5 /* SceneDelegate.swift */,
-				1ED76C0924F8EBDD0066DDD5 /* ViewController.swift */,
-				1ED76C0B24F8EBDD0066DDD5 /* Main.storyboard */,
 				1ED76C0E24F8EBDE0066DDD5 /* Assets.xcassets */,
-				1ED76C1024F8EBDE0066DDD5 /* LaunchScreen.storyboard */,
 				1ED76C1324F8EBDE0066DDD5 /* Info.plist */,
 			);
 			path = MonstarLab_Exam;
+			sourceTree = "<group>";
+		};
+		1ED76C1924F8EC880066DDD5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1ED76C1A24F8EC8E0066DDD5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1ED76C1B24F8EC950066DDD5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1ED76C1D24F8ECAC0066DDD5 /* Controller */,
+				1ED76C1C24F8ECA30066DDD5 /* Storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1ED76C1C24F8ECA30066DDD5 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				1ED76C0B24F8EBDD0066DDD5 /* Main.storyboard */,
+				1ED76C1024F8EBDE0066DDD5 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		1ED76C1D24F8ECAC0066DDD5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1ED76C0924F8EBDD0066DDD5 /* BaseViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +175,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ED76C0A24F8EBDD0066DDD5 /* ViewController.swift in Sources */,
+				1ED76C0A24F8EBDD0066DDD5 /* BaseViewController.swift in Sources */,
 				1ED76C0624F8EBDD0066DDD5 /* AppDelegate.swift in Sources */,
-				1ED76C0824F8EBDD0066DDD5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +323,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YAW66AW89G;
 				INFOPLIST_FILE = MonstarLab_Exam/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +342,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YAW66AW89G;
 				INFOPLIST_FILE = MonstarLab_Exam/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
