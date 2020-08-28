@@ -25,6 +25,32 @@ class MainViewController: BaseViewController {
 
 extension MainViewController: BaseViewModelDelegate {
     func didChangeState(state: State) {
+        switch state {
+        case .loading:
+            break
+        case .success( _):
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        case .error(let message):
+            if let message = message {
+                showAlert(message: message)
+            }
+        }
+    }
+}
+
+extension MainViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfItems
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemCell
         
+        let row = indexPath.row
+        
+        cell.mainTitleLabel.text = viewModel.titleOfItemAt(row)
+        return cell
     }
 }

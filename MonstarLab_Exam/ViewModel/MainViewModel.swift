@@ -16,6 +16,11 @@ class MainViewModel {
     let repository: RepositoryProtocol
     weak var delegate: BaseViewModelDelegate?
     
+    private var items = [Item]()
+    var numberOfItems: Int {
+        return items.count
+    }
+    
     init(repository: RepositoryProtocol, delegate: BaseViewModelDelegate) {
         self.repository = repository
         self.delegate = delegate
@@ -24,9 +29,15 @@ class MainViewModel {
     func getData() {
         delegate?.didChangeState(state: .loading)
         repository.getDataFromServer(with: Endpoint.photos, successHandler: { items in
+            self.items = items
             self.delegate?.didChangeState(state: .success(nil))
         }, errorHandler: { message in
             self.delegate?.didChangeState(state: .error(message))
         })
+    }
+    
+    // Data Transformations
+    func titleOfItemAt(_ index: Int) -> String {
+        return items[safe: index]?.title ?? ""
     }
 }
