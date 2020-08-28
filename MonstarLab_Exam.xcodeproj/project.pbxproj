@@ -23,6 +23,8 @@
 		1ED76C3324F8F2F20066DDD5 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED76C3224F8F2F20066DDD5 /* ErrorResponse.swift */; };
 		1ED76C3524F8F35E0066DDD5 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED76C3424F8F35E0066DDD5 /* Helpers.swift */; };
 		1ED76C3724F8F9D80066DDD5 /* WebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED76C3624F8F9D80066DDD5 /* WebImageView.swift */; };
+		1ED76C3924F8FB880066DDD5 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED76C3824F8FB880066DDD5 /* DetailViewModel.swift */; };
+		1ED76C3B24F8FB9A0066DDD5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED76C3A24F8FB9A0066DDD5 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		1ED76C3224F8F2F20066DDD5 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		1ED76C3424F8F35E0066DDD5 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		1ED76C3624F8F9D80066DDD5 /* WebImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageView.swift; sourceTree = "<group>"; };
+		1ED76C3824F8FB880066DDD5 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		1ED76C3A24F8FB9A0066DDD5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				1ED76C2824F8F06E0066DDD5 /* MainViewModel.swift */,
+				1ED76C3824F8FB880066DDD5 /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 				1ED76C2D24F8F0DB0066DDD5 /* Cell */,
 				1ED76C0924F8EBDD0066DDD5 /* BaseViewController.swift */,
 				1ED76C2624F8F0390066DDD5 /* MainViewController.swift */,
+				1ED76C3A24F8FB9A0066DDD5 /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -249,8 +255,10 @@
 				1ED76C0A24F8EBDD0066DDD5 /* BaseViewController.swift in Sources */,
 				1ED76C2724F8F0390066DDD5 /* MainViewController.swift in Sources */,
 				1ED76C3524F8F35E0066DDD5 /* Helpers.swift in Sources */,
+				1ED76C3924F8FB880066DDD5 /* DetailViewModel.swift in Sources */,
 				1ED76C0624F8EBDD0066DDD5 /* AppDelegate.swift in Sources */,
 				1ED76C3324F8F2F20066DDD5 /* ErrorResponse.swift in Sources */,
+				1ED76C3B24F8FB9A0066DDD5 /* DetailViewController.swift in Sources */,
 				1ED76C2324F8EF8F0066DDD5 /* Constants.swift in Sources */,
 				1ED76C2F24F8F1120066DDD5 /* ItemCell.swift in Sources */,
 			);

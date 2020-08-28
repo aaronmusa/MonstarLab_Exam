@@ -27,13 +27,15 @@ extension MainViewController: BaseViewModelDelegate {
     func didChangeState(state: State) {
         switch state {
         case .loading:
-            break
+            showLoadingIndicator()
         case .success( _):
             DispatchQueue.main.async {
+                self.dismissLoadingIndicator()
                 self.tableView.reloadData()
             }
         case .error(let message):
             if let message = message {
+                dismissLoadingIndicator()
                 showAlert(message: message)
             }
         }
@@ -58,5 +60,9 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: Segue.showDetail, sender: viewModel.itemAt(indexPath.row))
     }
 }

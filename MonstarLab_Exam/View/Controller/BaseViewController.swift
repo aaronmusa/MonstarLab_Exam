@@ -9,10 +9,32 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+    lazy var activityIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(frame: CGRect(origin: .zero, size: CGSize(width: 100, height: 100)))
+        indicator.center = view.center
+        indicator.hidesWhenStopped = true
+        
+        return indicator
+    }()
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segue.showDetail, let item = sender as? Item, let destinationVc = segue.destination as? DetailViewController {
+            
+            destinationVc.viewModel = DetailViewModel(item: item)
+        }
+    }
+    
+    // Methods
+    func showLoadingIndicator() {
+        guard view.subviews.contains(activityIndicator) == false else { return }
+        activityIndicator.startAnimating()
+        view.addSubview(activityIndicator)
+    }
+    
+    func dismissLoadingIndicator() {
+        activityIndicator.stopAnimating()
+        activityIndicator.removeFromSuperview()
     }
 }
 

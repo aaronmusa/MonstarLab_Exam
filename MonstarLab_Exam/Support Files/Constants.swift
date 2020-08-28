@@ -25,3 +25,7 @@ enum State {
     case success(String?)
     case error(String?)
 }
+
+struct Segue {
+    static let showDetail = "ShowDetail"
+}
