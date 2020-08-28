@@ -15,6 +15,10 @@
 		1ED76C2024F8EF260066DDD5 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED76C1F24F8EF260066DDD5 /* CustomView.swift */; };
 		1ED76C2324F8EF8F0066DDD5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED76C2224F8EF8F0066DDD5 /* Constants.swift */; };
 		1ED76C2524F8EFC50066DDD5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED76C2424F8EFC50066DDD5 /* Colors.swift */; };
+		1ED76C2724F8F0390066DDD5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED76C2624F8F0390066DDD5 /* MainViewController.swift */; };
+		1ED76C2924F8F06E0066DDD5 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED76C2824F8F06E0066DDD5 /* MainViewModel.swift */; };
+		1ED76C2C24F8F0890066DDD5 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED76C2B24F8F0890066DDD5 /* Repository.swift */; };
+		1ED76C2F24F8F1120066DDD5 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED76C2E24F8F1120066DDD5 /* MainCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		1ED76C1F24F8EF260066DDD5 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		1ED76C2224F8EF8F0066DDD5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1ED76C2424F8EFC50066DDD5 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		1ED76C2624F8F0390066DDD5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1ED76C2824F8F06E0066DDD5 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		1ED76C2B24F8F0890066DDD5 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		1ED76C2E24F8F1120066DDD5 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 		1ED76C1A24F8EC8E0066DDD5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1ED76C2824F8F06E0066DDD5 /* MainViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -107,7 +116,9 @@
 		1ED76C1D24F8ECAC0066DDD5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1ED76C2D24F8F0DB0066DDD5 /* Cell */,
 				1ED76C0924F8EBDD0066DDD5 /* BaseViewController.swift */,
+				1ED76C2624F8F0390066DDD5 /* MainViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -123,10 +134,27 @@
 		1ED76C2124F8EF790066DDD5 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				1ED76C2A24F8F07F0066DDD5 /* Utils */,
 				1ED76C2224F8EF8F0066DDD5 /* Constants.swift */,
 				1ED76C2424F8EFC50066DDD5 /* Colors.swift */,
 			);
 			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		1ED76C2A24F8F07F0066DDD5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1ED76C2B24F8F0890066DDD5 /* Repository.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1ED76C2D24F8F0DB0066DDD5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1ED76C2E24F8F1120066DDD5 /* MainCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,11 +228,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ED76C2924F8F06E0066DDD5 /* MainViewModel.swift in Sources */,
 				1ED76C2024F8EF260066DDD5 /* CustomView.swift in Sources */,
 				1ED76C2524F8EFC50066DDD5 /* Colors.swift in Sources */,
+				1ED76C2C24F8F0890066DDD5 /* Repository.swift in Sources */,
 				1ED76C0A24F8EBDD0066DDD5 /* BaseViewController.swift in Sources */,
+				1ED76C2724F8F0390066DDD5 /* MainViewController.swift in Sources */,
 				1ED76C0624F8EBDD0066DDD5 /* AppDelegate.swift in Sources */,
 				1ED76C2324F8EF8F0066DDD5 /* Constants.swift in Sources */,
+				1ED76C2F24F8F1120066DDD5 /* MainCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

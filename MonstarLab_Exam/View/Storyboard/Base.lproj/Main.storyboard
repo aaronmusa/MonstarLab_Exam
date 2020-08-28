@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="MonstarLab_Exam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="145" id="4ud-Wj-SHy">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="145" id="4ud-Wj-SHy" customClass="MainCell" customModule="MonstarLab_Exam" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="145"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4ud-Wj-SHy" id="qrK-l8-Auw">
@@ -87,6 +87,10 @@
                                                 <constraint firstAttribute="trailing" secondItem="XQl-9D-N1g" secondAttribute="trailing" id="woU-y3-CIh"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="colorImageView" destination="YJf-92-L63" id="d71-x7-SD3"/>
+                                            <outlet property="mainTitleLabel" destination="Ur4-vE-pEZ" id="xAg-ko-mc1"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -102,6 +106,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="E9O-Mt-E3l"/>
                     <connections>
+                        <outlet property="tableView" destination="DE7-UK-TPq" id="xzm-yk-qvY"/>
                         <segue destination="f3H-FU-q71" kind="show" identifier="ShowDetail" id="mt4-hI-6Es"/>
                     </connections>
                 </viewController>
@@ -160,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aY9-Oa-6lR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1955" y="132"/>
+            <point key="canvasLocation" x="1917" y="132"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RWo-kV-jNN">
